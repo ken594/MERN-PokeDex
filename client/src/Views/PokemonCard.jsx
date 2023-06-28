@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const PokemonCard = (props) => {
     const { pokemon, index } = props;
@@ -20,11 +20,11 @@ const PokemonCard = (props) => {
         <div>
             <p>No.{index}</p>
             <img src={imageUrl} alt={pokemon.name}/>
-            {/* Captalize the first letter and make sure the rest are lowerletters */}
             <br />
+            {/* Captalize the first letter and make sure the rest are lowerletters */}
             {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}
         </div>
-    )
+    );
 }
 
-export default PokemonCard
+export default PokemonCard;
