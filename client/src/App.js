@@ -1,10 +1,14 @@
-import Main from "./Main";
+import Main from "./components/Main";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Main />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={ <Main /> } />
+        <Route path="/:pokemon" element={ <Main /> } />
+      </Routes>
+    </>
   );
 }
 
