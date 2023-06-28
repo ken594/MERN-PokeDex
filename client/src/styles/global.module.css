@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.pokemon_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon_logo_img{
+    width: 600px
+}
+
+.pokemon_container{
+    margin: 2%;
+}
