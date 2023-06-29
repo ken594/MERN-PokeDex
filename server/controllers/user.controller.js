@@ -1,4 +1,6 @@
 const { User } = require('../models/user.model');
+const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
 
 module.exports = {
     index : (req, res) => {
@@ -7,7 +9,14 @@ module.exports = {
         });
     },
 
+    getAll: (req, res) => {
+        User.find()
+        .then(allUsers => res.json(allUsers))
+        .catch(err => res.json(err));
+    },
+
     register: (req, res) => {
+        console.log("Registering!!!!!")
         User.create(req.body)
             .then(user => {
                 const userToken = jwt.sign({
@@ -15,12 +24,12 @@ module.exports = {
                 }, process.env.SECRET_KEY);
 
                 res
-                    .cookie("usertoken", userToken, secret, {
+                    .cookie("usertoken", userToken, "secret", {
                         httpOnly: true
                     })
                     .json({ msg: "success!", user: user });
             })
-            .catch(err => res.json(err));
+            .catch(err => res.status(400).json(err));
     },
 
     login: async(req, res) => {
@@ -44,7 +53,7 @@ module.exports = {
 
         // note that the response object allows chained calls to cookie and json
         res
-            .cookie("usertoken", userToken, secret, {
+            .cookie("usertoken", userToken, "secret", {
                 httpOnly: true
             })
             .json({ msg: "success!" });
