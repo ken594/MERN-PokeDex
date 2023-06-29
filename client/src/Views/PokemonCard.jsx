@@ -1,4 +1,6 @@
 import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion'
+import styles from "../styles/global.module.css"
 
 const PokemonCard = (props) => {
     const { pokemon, index } = props;
@@ -17,13 +19,28 @@ const PokemonCard = (props) => {
     }
 
     return (
-        <div>
+        <motion.div
+            initial={{
+                scale: 0
+            }}
+            animate={{
+                scale: 1
+            }}
+            transition={{
+                duration: 2,
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                delay: 0 + index * 0.1
+            }}
+            className={ styles.pokemon_card }
+        >
             <p>No.{index}</p>
             <img src={imageUrl} alt={pokemon.name}/>
             <br />
             {/* Captalize the first letter and make sure the rest are lowerletters */}
             {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}
-        </div>
+        </motion.div>
     );
 }
 

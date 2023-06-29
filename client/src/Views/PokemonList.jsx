@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PokemonCard from './PokemonCard';
 import { getAll } from '../services/PokemonService';
+import styles from "../styles/global.module.css"
 
 
 const PokemonList = () => {
@@ -13,7 +14,7 @@ const PokemonList = () => {
     }, []);
 
     return (
-        <div>
+        <div className={ styles.pokemon_container }>
             {
                 pokemons.length
                     ? pokemons.map( (pokemon,index) => {

@@ -20,5 +20,20 @@
 }
 
 .pokemon_container{
-    margin: 2%;
+    margin: 0% 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.pokemon_card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    height: 300px;
+    border: 1px solid black;
+    padding: 2rem 3rem;
+    gap: 2rem;
 }
