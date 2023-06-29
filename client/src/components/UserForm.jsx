@@ -73,7 +73,7 @@ const UserForm = (props) => {
                         : <button style={ borderStyle } >Login</button>
                 }
                 <hr />
-                { !isRegistered && <Link to="/register">Not a user? Register!</Link>}
+                { !isRegistered && <Link to="/register" onClick={() => setErrors([])}>Not a user? Register!</Link>}
                 
             </form>
 
