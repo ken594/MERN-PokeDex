@@ -69,6 +69,13 @@ const UserForm = (props) => {
                                 <input style={ borderStyle } type='password' name='confirmPassword' onChange={ handleChange } />
                             </p>
                             <button style={ borderStyle } >Register</button>
+                            <button 
+                                style={ borderStyle } 
+                                onClick={() => {
+                                    setErrors([]);
+                                    navigate('/');
+                                }}
+                                >Back</button>
                         </>
                         : <button style={ borderStyle } >Login</button>
                 }
