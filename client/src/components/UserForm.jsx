@@ -50,8 +50,8 @@ const UserForm = (props) => {
 
     return (
         <div>
-            {errors.map((err, index) => <p key={index}>{err}</p>)}
             <h1>PokeDex</h1>
+            {errors.map((err, index) => <p key={index}>{err}</p>)}
             <form onSubmit={ onSubmitHandler }>
                 <p>
                     <label>Email: </label>
