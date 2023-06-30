@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'
-import styles from "../styles/global.module.css"
 import PokemonList from './PokemonList';
-
 
 export default () => {
 

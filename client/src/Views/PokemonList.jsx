@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import PokemonCard from './PokemonCard';
+import PokemonCard from '../components/PokemonCard';
 import { getAll } from '../services/PokemonService';
-import styles from "../styles/global.module.css"
 
 
 const PokemonList = () => {
