@@ -65,11 +65,15 @@ const UserForm = (props) => {
         backdropFilter: 'blur(5px)',
     }
 
+    const red = {
+        color: 'red'
+    }
+
     return (
         <div className='flex items-center justify-center' style={backgroundImg}>
         <div className='p-20 rounded-2xl' style={formBackground}>
             <h1 className='text-5xl font-extrabold mb-4'>PokeDex</h1>
-            {errors.map((err, index) => <p key={index}>{err}</p>)}
+            {errors.map((err, index) => <p key={index} style={red}>{err}</p>)}
             <form onSubmit={ onSubmitHandler } className='flex flex-col gap-5'>
                 <p className='text-2xl font-semibold'>
                     <label>Email: </label>
