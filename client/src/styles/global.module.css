@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*
 ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 *//*
@@ -480,24 +483,4 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-
-.pokemon_container{
-  margin: 0% 2%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-}
-
-.pokemon_card{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  flex: 1;
-  height: 300px;
-  border: 1px solid black;
-  padding: 2rem 3rem;
-  gap: 2rem;
-}
-
 

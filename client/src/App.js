@@ -1,4 +1,4 @@
-import Main from "./components/Main";
+import Main from "./Views/Main";
 import { Routes, Route } from "react-router-dom";
 import UserForm from "./components/UserForm";
 

@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    background-image: url('https://r4.wallpaperflare.com/wallpaper/789/129/220/pokemon-blastoise-pokemon-bulbasaur-pokemon-charizard-pokemon-wallpaper-6960585db18a1ddb56f7384f00c1f61d.jpg');
+}

@@ -14,7 +14,7 @@ const PokemonList = () => {
     }, []);
 
     return (
-        <div className={ styles.pokemon_container }>
+        <div className='flex flex-wrap gap-10 mx-10 text-center'>
             {
                 pokemons.length
                     ? pokemons.map( (pokemon,index) => {

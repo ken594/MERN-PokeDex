@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'
 import styles from "../styles/global.module.css"
-import PokemonCard from './PokemonCard';
-import PokemonList from '../Views/PokemonList';
+import PokemonList from './PokemonList';
 
 
 export default () => {
-    const [message, setMessage] = useState("Loading...")
-    // useEffect(() => {
-    //     axios.get("http://localhost:8000/api")
-    //         .then(res => setMessage(res.data.message))
-    // }, []);
+
+    const pokemon_logo = {
+        width: '500px'
+    }
+
     return (
         <>
-            <div className={ styles.pokemon_logo }>
+            <div className='flex justify-center item-center'>
                 <motion.img 
                 src='https://i.pinimg.com/originals/fd/18/c6/fd18c6d26d4d9d26a0bd9d1a2fb2bd04.png'
                 initial={{
@@ -30,12 +29,12 @@ export default () => {
                     stiffness: 30,
                     damping: 7
                 }}
-                className={ styles.pokemon_logo_img }
+                style={pokemon_logo}
                 alt='pokemon_logo_img'>
                 </motion.img>
             </div>
 
-            <div className={ styles.pokemon_container }>
+            <div className='flex flex-wrap'>
                 {/* <PokemonCard /> */}
                 <PokemonList />
             </div>
