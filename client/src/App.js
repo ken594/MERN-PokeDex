@@ -1,5 +1,4 @@
 import Main from "./components/Main";
-import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import UserForm from "./components/UserForm";
 
