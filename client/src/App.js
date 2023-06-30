@@ -1,6 +1,7 @@
 import Main from "./Views/Main";
 import { Routes, Route } from "react-router-dom";
 import UserForm from "./components/UserForm";
+import Pokemon from "./Views/Pokemon";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         } />
         <Route path='/register' element={ <UserForm isRegistered={1}/> }  />
         <Route path='/pokemon' element={ <Main /> } />
+        <Route path='/pokemon/:id' element={ <Pokemon /> } />
         {/* <Route path="/:pokemon" element={ <Main /> } /> */}
       </Routes>
     </>

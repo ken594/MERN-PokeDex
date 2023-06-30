@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { getAllPokeApi } from '../services/PokemonService';
-import styles from "../styles/global.module.css"
+import { useNavigate } from 'react-router-dom';
 import "../index.css"
 import "../styles/global.module.css"
 
@@ -11,6 +11,8 @@ const PokemonCard = (props) => {
     const [pokeApi, setPokeApi] = useState()
 
     const [pokemonColor, setPokemonColor] = useState()
+    
+    const navigate = useNavigate()
 
     // handle image url
     // const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${index+1}.png?raw=true`;
@@ -44,6 +46,7 @@ const PokemonCard = (props) => {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        cursor: 'pointer'
     }
 
     const pokemon_gif = {
@@ -94,7 +97,9 @@ const PokemonCard = (props) => {
         padding: '0.5rem'
     }
 
-
+    const handleClick = () => {
+        navigate(`/pokemon/${pokeApi.id}`)
+    }
 
 
     return (
@@ -114,6 +119,7 @@ const PokemonCard = (props) => {
             }}
             className='flex flex-col justify-center items-center flex-1'
             style={pokemon_card_style}
+            onClick={handleClick}
         >
             <div style={pokemon_gif} className='flex flex-col justify-between items-center py-10'>
             <p className='text-4xl font-bold'>No.{index}</p>

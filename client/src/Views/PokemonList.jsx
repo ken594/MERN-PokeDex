@@ -18,7 +18,7 @@ const PokemonList = () => {
                 pokemons.length
                     ? pokemons.map( (pokemon,index) => {
                         return (
-                            <PokemonCard key={ pokemon.name } pokemon={ pokemon } index={ index+1 }/>
+                            <PokemonCard key={ pokemon.name } pokemon={ pokemon } index={ index+1 } />
                         )
                     } )
                     : null
