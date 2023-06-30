@@ -10,6 +10,7 @@ const UserForm = (props) => {
         password: "",
         confirmPassword: ""
     };
+
     const navigate = useNavigate();
 
     const borderStyle = {
@@ -101,8 +102,6 @@ const UserForm = (props) => {
                 { !isRegistered && <Link to="/register" onClick={() => setErrors([])} className='text-center hover:text-white'>Not a user? Register!</Link>}
                 
             </form>
-
-
         </div>
         </div>
     )

@@ -29,7 +29,6 @@ export default function Pokemon() {
         height: '100vh'
     }
 
-    console.log(pokemonData)
     return (
         <div className="flex justify-center items-center" style={pokeCard}>
             <div className="flex justify-center items-center gap-52">
