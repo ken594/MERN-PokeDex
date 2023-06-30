@@ -1,13 +1,22 @@
 import Main from "./components/Main";
+import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
+import UserForm from "./components/UserForm";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello World</h1>
       <Routes>
-        <Route path="/" element={ <Main /> } />
-        <Route path="/:pokemon" element={ <Main /> } />
+        <Route path="/" element={ 
+          <>
+            {/* <Navbar /> */}
+            {/* <Main />  */}
+            <UserForm isRegistered={0}/>
+          </>
+        } />
+        <Route path='/register' element={ <UserForm isRegistered={1}/> }  />
+        <Route path='/pokemon' element={ <Main /> } />
+        {/* <Route path="/:pokemon" element={ <Main /> } /> */}
       </Routes>
     </>
   );

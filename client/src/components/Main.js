@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'
 import styles from "../styles/global.module.css"
 import PokemonCard from './PokemonCard';
+import PokemonList from '../Views/PokemonList';
 
 
 export default () => {
@@ -35,7 +36,8 @@ export default () => {
             </div>
 
             <div className={ styles.pokemon_container }>
-                <PokemonCard />
+                {/* <PokemonCard /> */}
+                <PokemonList />
             </div>
         </>
     )
